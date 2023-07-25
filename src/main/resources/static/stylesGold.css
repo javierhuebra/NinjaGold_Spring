@@ -52,15 +52,15 @@ body {
 .card {
     width: 200px;
     height: 250px;
-    background-color: rgb(255, 187, 0);
+    
     
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    
     align-items: center;
     margin-right: 15px;
 
-    box-shadow: 0px 0px 15px black;
+    
 }
 .activity{
     margin-top: 25px;
@@ -177,9 +177,7 @@ body {
     margin-right: 25px;
    
     border-radius: 10px;
-    left: 50px;
-    top: 50px;
-    position: absolute;
+    
 
     width: 300px;
     height: 100px;
@@ -199,17 +197,67 @@ body {
 
 }
 .img-card{
-    width: 80%;
-    height: 150px;
+    width: 100%;
+    height: 100%;
 }
-
+form{
+    width: 100%;
+    height: 20%;
+}
 .btn{
-    padding: 15px 35px;
+    height: 100%;
+    width: 100%;
+    background-image: url(./assets/img/btnimage.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    background-color: transparent;
+    border: none;
+    filter: drop-shadow(0px 0px 15px black);
 }
 .btn:hover{
     cursor: pointer;
+    opacity: 0.7;
 }
+.coin{
+    width: 50px;
+    position: absolute;
+    z-index: 500;
 
+    left: 25px;
+    top: 25px;
+}
+.cont-orito{
+    
+    display: flex;
+
+    left: 50px;
+    top: 50px;
+    position: absolute;
+}
+.cont-pixel{
+    position: relative;
+    width: 100%;
+    height: 80%;
+    background-color: blue;
+    box-shadow: 0px 0px 15px black;
+}
+.cont-txt-pixel{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.219);
+    color: white;
+    position: absolute;
+    top: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: bold;
+}
 @keyframes rotateInfinitely {
     0% {
         transform: rotate(0deg);
