@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Comme:wght@100&family=Press+Start+2P&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Arial', Helvetica, sans-serif;
+}
+
+
+
+#respuesta_div {
+    background-color: rgba(0, 0, 0, 0.541);
+    height: 250px;
+    width: 1200px;
+    overflow-y: scroll;
+    padding-top: 5px;
+    padding-left: 5px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.adicion {
+    color: greenyellow;
+    margin-bottom: 10px;
+}
+
+.sustraccion {
+    color: red;
+    margin-bottom: 10px;
+}
+
+.dinero {
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+}
+
+.card {
+    width: 200px;
+    height: 250px;
+    background-color: rgb(255, 187, 0);
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+
+    box-shadow: 0px 0px 15px black;
+}
+.activity{
+    margin-top: 25px;
+}
+.action-container {
+    display: flex;
+}
+
+.granja_log {
+    background-color: coral;
+    color: blue;
+    padding: 3px;
+    border-radius: 6px;
+}
+
+.cueva_log {
+    background-color: gray;
+    color: white;
+    padding: 3px;
+    border-radius: 6px;
+}
+
+.casa_log {
+    background-color: rgb(130, 248, 179);
+    color: rgb(54, 0, 0);
+    padding: 3px;
+    border-radius: 6px;
+}
+
+.casino_log {
+    background-color: indigo;
+    color: white;
+    padding: 3px;
+    border-radius: 6px;
+}
+
+.spa_log{
+    background-color: rgb(0, 78, 130);
+    color: white;
+    padding: 3px;
+    border-radius: 6px;
+}
+
+.title {
+    background-color: orange;
+    width: 100vw;
+    text-align: center;
+}
+
+.img-container {
+    width: 100vw;
+    height: 30%;
+    
+
+    display: flex;
+    justify-content: center;
+
+    position: relative;
+    overflow: hidden;
+
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.6)), url(./assets/img/medieval.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.cont-contenido{
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+
+    background-image: url(./assets/img/medieval.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    position: relative;
+}
+
+.img-1 {
+    height: 100%;
+
+    animation: rotateInfinitely 10s linear infinite;
+    /* La animación se llama "rotateInfinitely" */
+}
+
+.img-ninja1 {
+    position: absolute;
+    left: 0;
+    animation: moverVertical 6s infinite alternate;
+}
+
+.img-ninja2 {
+    position: absolute;
+    right: -20%;
+    animation: moverVertical2 6s infinite alternate;
+}
+
+.primera-div{
+    display: flex;
+    
+    
+    
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 25px;
+}
+.orito{
+    
+    margin-right: 25px;
+   
+    border-radius: 10px;
+    left: 50px;
+    top: 50px;
+    position: absolute;
+
+    width: 300px;
+    height: 100px;
+    background-image: url(./assets/img/tablita.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: yellow;
+    font-size: 35px;
+
+    filter: drop-shadow(0px 0px 15px black);
+
+}
+.img-card{
+    width: 80%;
+    height: 150px;
+}
+
+.btn{
+    padding: 15px 35px;
+}
+.btn:hover{
+    cursor: pointer;
+}
+
+@keyframes rotateInfinitely {
+    0% {
+        transform: rotate(0deg);
+        /* La imagen está en su posición inicial (0 grados) */
+    }
+
+    100% {
+        transform: rotate(360deg);
+        /* La imagen gira 360 grados */
+    }
+}
+
+@keyframes moverVertical {
+    0% {
+        top: 0;
+        transform: scale(1);
+    }
+
+    100% {
+        top: -200%;
+        transform: scale(1.5);
+    }
+}
+
+@keyframes moverVertical2 {
+    0% {
+        top: -200%;
+        transform: scale(1);
+
+    }
+
+    100% {
+        top: 0%;
+        transform: scale(1.5);
+
+    }
+}
