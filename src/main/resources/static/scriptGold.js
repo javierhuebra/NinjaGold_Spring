@@ -2,6 +2,20 @@ import { formatQuant } from "./helpers.js";
 
 console.log("Js vinculado")
 
+window.addEventListener('load', () => {
+
+  fetch('/actions/load',{
+    method: 'GET'
+  })
+  .then(response => response.json())
+  .then(data =>{
+    console.log("Se fetchea al recargar el oro que hay en el srv:", data)//Con el getter en el archivo java solo sco el oro, no el objeto completo
+    document.querySelector(".oroExistente").textContent = formatQuant(data)
+  })
+
+});
+
+
 //Manejar la solicitud del formulario granja
 document.getElementById('granja_form').addEventListener('submit', function (event) {
     event.preventDefault();

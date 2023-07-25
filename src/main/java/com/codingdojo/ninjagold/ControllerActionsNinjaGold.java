@@ -3,6 +3,7 @@ package com.codingdojo.ninjagold;
 import java.time.LocalDateTime;
 import java.util.Random;
 
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,6 +13,12 @@ import org.springframework.web.bind.annotation.RestController;
 public class ControllerActionsNinjaGold {
     private int gold = 0;
     private GoldData informacion = new GoldData();
+
+    @GetMapping("/load")
+    public int loadAction(){
+
+        return informacion.getGoldExistente();//retorno el oro que hay en el servidor
+    }
 
     @PostMapping("/granja")
     public GoldData granjaAction() {
